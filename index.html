@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesona Wisata Kecamatan Mangkutana | Luwu Timur</title>
+  <meta name="description" content="Website promosi wisata interaktif Kecamatan Mangkutana, Kabupaten Luwu Timur, Sulawesi Selatan. Eksplorasi Permandian Watu Maeta, Sungai Lengkong, dan Permandian Uelanti.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. HEADER / NAVBAR (Sesuai Storyboard: Logo di Kiri, Beranda-Wisata-Tentang di Kanan)
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container header-container">
+      
+      <!-- Box Logo Kiri Sesuai Wireframe -->
+      <a href="#beranda" class="brand-logo" title="Pesona Mangkutana">
+        <div class="logo-badge">
+          <!-- Logo Resmi Kabupaten Luwu Timur -->
+          <img src="logo_luwu_timur.png" alt="Logo Kabupaten Luwu Timur" class="logo-lutim-img">
+        </div>
+        <div class="logo-text-wrapper">
+          <span class="logo-title">MANGKUTANA</span>
+          <span class="logo-subtitle">Wisata Luwu Timur</span>
+        </div>
+      </a>
+
+      <!-- Menu Kanan Sesuai Kotak [Beranda] [Wisata] [Tentang] di Wireframe -->
+      <nav class="main-nav" id="mainNav">
+        <ul class="nav-links">
+          <li>
+            <a href="#beranda" class="nav-link wireframe-style active">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+              Beranda
+            </a>
+          </li>
+          <li>
+            <a href="#wisata" class="nav-link wireframe-style">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+              </svg>
+              Wisata
+            </a>
+          </li>
+          <li>
+            <a href="informasi.html" class="nav-link wireframe-style">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              Informasi
+            </a>
+          </li>
+          <li>
+            <a href="kuis.html" class="nav-link wireframe-style">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+              Kuis
+            </a>
+          </li>
+          <li>
+            <a href="#tentang" class="nav-link wireframe-style">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+              Tentang
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Action: Mode Gelap/Terang & Tombol Mobile -->
+      <div class="header-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Ganti Tema">
+          <span id="themeIcon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </span>
+        </button>
+        <button class="btn-mobile-toggle" id="mobileNavToggle" aria-label="Buka Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. HERO SLIDER SECTION (Sesuai Storyboard: Banner Besar + Tombol < dan >)
+       ========================================================================= -->
+  <section class="hero-section" id="beranda">
+    <div class="container">
+      
+      <div class="hero-carousel-wrapper">
+        
+        <!-- Track Slides -->
+        <div class="carousel-track-container" id="carouselTrack">
+          
+          <!-- Slide 1: Watu Maeta -->
+          <div class="carousel-slide active">
+            <img 
+              src="watu_maeta_utama.jpg" 
+              alt="Permandian Watu Maeta Mangkutana" 
+              class="carousel-image"
+            >
+            <div class="carousel-overlay">
+              <div class="slide-content">
+                <span class="slide-tag">🏆 Rekomendasi #1 di Mangkutana</span>
+                <h1 class="slide-title">Kejernihan Sejati Permandian Watu Maeta</h1>
+                <p class="slide-desc">
+                  Rasakan dingin dan segarnya aliran sungai alami pegunungan di Desa Margolembo yang dihiasi sepasang batu hitam legendaris suku Pamona.
+                </p>
+                <div class="slide-actions">
+                  <a href="#wisata" class="btn-primary">
+                    Jelajahi Sekarang
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                  <button class="btn-secondary" onclick="openDestinationModal('watu-maeta')">
+                    Lihat Galeri & Tiket
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Wisata Alam Sungai Lengkong -->
+          <div class="carousel-slide">
+            <img 
+              src="sungai_lengkong_utama.jpg" 
+              alt="Wisata Alam Sungai Lengkong" 
+              class="carousel-image"
+            >
+            <div class="carousel-overlay">
+              <div class="slide-content">
+                <span class="slide-tag">🥈 Rekomendasi #2 di Mangkutana</span>
+                <h2 class="slide-title">Pesona Asri Bebatuan Sungai Lengkong</h2>
+                <p class="slide-desc">
+                  Wisata pemandian sungai alami dengan air jernih dingin nan menyegarkan, dinaungi pepohonan asri dan formasi bebatuan kali yang eksotis.
+                </p>
+                <div class="slide-actions">
+                  <a href="#wisata" class="btn-primary">
+                    Lihat Aktivitas
+                  </a>
+                  <button class="btn-secondary" onclick="openDestinationModal('sungai-lengkong')">
+                    Detail Fasilitas
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Permandian Uelanti -->
+          <div class="carousel-slide">
+            <img 
+              src="pemandian_uelanti_utama.jpg" 
+              alt="Permandian Alam Uelanti Kasintuwu" 
+              class="carousel-image"
+            >
+            <div class="carousel-overlay">
+              <div class="slide-content">
+                <span class="slide-tag">🥉 Rekomendasi #3 di Mangkutana</span>
+                <h2 class="slide-title">Harmoni Asri di Kolam Alam Uelanti</h2>
+                <p class="slide-desc">
+                  Destinasi pemandian alami di Desa Kasintuwu dengan gazebo teduh, air sungai dangkal yang aman untuk anak, serta udara tropis yang menyejukkan.
+                </p>
+                <div class="slide-actions">
+                  <a href="#wisata" class="btn-primary">Pilihan Liburan</a>
+                  <button class="btn-secondary" onclick="openDestinationModal('pemandian-uelanti')">Info Rute</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Tombol Navigasi Panah < dan > PERSIS Sesuai Storyboard -->
+        <button class="carousel-btn prev" id="carouselPrev" aria-label="Slide Sebelumnya" title="Sebelumnya">
+          &#10094;
+        </button>
+        <button class="carousel-btn next" id="carouselNext" aria-label="Slide Berikutnya" title="Berikutnya">
+          &#10095;
+        </button>
+
+        <!-- Indikator Slide -->
+        <div class="carousel-indicators" id="carouselIndicators"></div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. QUICK STATS BANNER
+       ========================================================================= -->
+  <section class="container">
+    <div class="stats-banner">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Air Alami Pegunungan</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">5+</div>
+          <div class="stat-label">Destinasi Populer</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">4.8★</div>
+          <div class="stat-label">Kepuasan Pengunjung</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">11</div>
+          <div class="stat-label">Desa Penuh Potensi</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. FEATURED 4 CARDS SECTION (Sesuai Storyboard: 4 Kolom di Bawah Slider)
+       ========================================================================= -->
+  <section class="featured-section" id="wisata">
+    <div class="container">
+      
+      <!-- Section Header & Filter Bar -->
+      <div class="section-header">
+        <div>
+          <span class="section-tag">Top 3 Rekomendasi Utama</span>
+          <h2 class="section-title">Destinasi Wisata Pilihan Mangkutana</h2>
+          <p class="section-subtitle">
+            1. Permandian Watu Maeta • 2. Wisata Alam Sungai Lengkong • 3. Permandian Alam Uelanti
+          </p>
+        </div>
+
+        <!-- Filter Interaktif -->
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="semua">Semua (3 Destinasi)</button>
+          <button class="filter-btn" data-filter="sungai">Pemandian Alam & Sungai</button>
+        </div>
+      </div>
+
+      <!-- GRID 3 KARTU REKOMENDASI UTAMA (Statik HTML & Sinkron dengan Foto di Root) -->
+      <div class="cards-grid-3" id="featuredCardsGrid">
+        
+        <!-- KARTU 1: PERMANDIAN WATU MAETA -->
+        <div class="tour-card" data-id="watu-maeta" data-category="sungai">
+          <div class="card-image-box">
+            <img src="watu_maeta_utama.jpg" alt="Permandian Watu Maeta" class="card-image" loading="lazy">
+            <span class="card-badge-category">🏆 #1 Pemandian Alam & Sungai</span>
+            <button class="card-favorite-btn" aria-label="Favoritkan Permandian Watu Maeta" data-id="watu-maeta">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Desa Margolembo
+              </span>
+              <span class="card-rating">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                4.9
+              </span>
+            </div>
+            <h3 class="card-title">Permandian Watu Maeta</h3>
+            <div class="card-kearifan-snippet" title="Filosofi Batu Hitam Pamona & Kesucian Sumber Air">
+              <span>🌿 Filosofi Batu Hitam Pamona &amp; Kesucian Sumber Air</span>
+            </div>
+            <p class="card-description">Rekomendasi #1 di Mangkutana! Pemandian air sungai alami berair kristal dingin dengan dua batu hitam besar legendaris suku Pamona (Watu = batu, Maeta = hitam).</p>
+            <div class="card-footer">
+              <div class="card-price-info">
+                <span class="card-price-label">Tiket / Biaya</span>
+                <span class="card-price-val">Rp 5.000 / orang</span>
+              </div>
+              <button class="btn-card-detail" data-id="watu-maeta">
+                Detail
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- KARTU 2: WISATA ALAM SUNGAI LENGKONG -->
+        <div class="tour-card" data-id="sungai-lengkong" data-category="sungai">
+          <div class="card-image-box">
+            <img src="sungai_lengkong_utama.jpg" alt="Wisata Alam Sungai Lengkong" class="card-image" loading="lazy">
+            <span class="card-badge-category">🏆 #2 Pemandian Asri & Bebatuan Kali</span>
+            <button class="card-favorite-btn" aria-label="Favoritkan Wisata Alam Sungai Lengkong" data-id="sungai-lengkong">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Sungai Lengkong
+              </span>
+              <span class="card-rating">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                4.8
+              </span>
+            </div>
+            <h3 class="card-title">Wisata Alam Sungai Lengkong</h3>
+            <div class="card-kearifan-snippet" title="Harmoni Air Lengkong & Tradisi Konservasi Bebatuan Kali">
+              <span>🌿 Harmoni Air Lengkong &amp; Tradisi Konservasi Bebat...</span>
+            </div>
+            <p class="card-description">Rekomendasi #2! Wisata pemandian sungai alami dengan air jernih dingin nan menyegarkan, dinaungi pepohonan asri dan formasi bebatuan kali eksotis.</p>
+            <div class="card-footer">
+              <div class="card-price-info">
+                <span class="card-price-label">Tiket / Biaya</span>
+                <span class="card-price-val">Rp 5.000 / orang</span>
+              </div>
+              <button class="btn-card-detail" data-id="sungai-lengkong">
+                Detail
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- KARTU 3: PERMANDIAN ALAM UELANTI -->
+        <div class="tour-card" data-id="pemandian-uelanti" data-category="sungai">
+          <div class="card-image-box">
+            <img src="pemandian_uelanti_utama.jpg" alt="Permandian Alam Uelanti" class="card-image" loading="lazy">
+            <span class="card-badge-category">🏆 #3 Pemandian Asri Ramah Anak</span>
+            <button class="card-favorite-btn" aria-label="Favoritkan Permandian Alam Uelanti" data-id="pemandian-uelanti">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Desa Kasintuwu
+              </span>
+              <span class="card-rating">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                4.8
+              </span>
+            </div>
+            <h3 class="card-title">Permandian Alam Uelanti</h3>
+            <div class="card-kearifan-snippet" title="Nilai Kasintuwu (Persatuan) & Tradisi Santap Kapurung di Sungai">
+              <span>🌿 Nilai Kasintuwu (Persatuan) &amp; Tradisi Santap Kapu...</span>
+            </div>
+            <p class="card-description">Rekomendasi #3! Objek wisata permandian air sungai jernih nan teduh dengan kolam alami yang ramah anak, gazebo keluarga, dan akses mudah.</p>
+            <div class="card-footer">
+              <div class="card-price-info">
+                <span class="card-price-label">Tiket / Biaya</span>
+                <span class="card-price-val">Rp 5.000 / orang</span>
+              </div>
+              <button class="btn-card-detail" data-id="pemandian-uelanti">
+                Detail
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. INTERACTIVE QUIZ CTA BANNER (Uji Pengetahuan Wisata Mangkutana)
+       ========================================================================= -->
+  <section class="container" style="padding: 2rem 1.5rem 3.5rem 1.5rem;" id="kuis-cta">
+    <div style="background: var(--accent-gradient); border-radius: var(--radius-lg); padding: 3rem 2.5rem; color: #fff; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 2rem; box-shadow: var(--shadow-xl);">
+      <div style="max-width: 650px;">
+        <span style="background: rgba(255,255,255,0.2); padding: 4px 14px; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; display: inline-block; margin-bottom: 0.75rem;">
+          🎯 Kuis Interaktif Wisata
+        </span>
+        <h3 style="font-size: 1.85rem; font-weight: 800; line-height: 1.3; margin-bottom: 0.5rem;">
+          Uji Pengetahuan Anda Seputar Wisata Mangkutana!
+        </h3>
+        <p style="opacity: 0.95; font-size: 1rem; line-height: 1.6;">
+          Jawab 10 pertanyaan pilihan ganda tentang keindahan alam, budaya suku Pamona, dan kearifan lokal Mangkutana. Raih skor hingga 100 poin dan buktikan predikat Anda!
+        </p>
+      </div>
+      <a href="kuis.html" class="btn-kuis-center" style="padding: 1.1rem 2.5rem; font-size: 1.2rem; background: #fff; color: var(--primary-forest); box-shadow: 0 8px 24px rgba(0,0,0,0.2); text-transform: uppercase;">
+        Mulai Kuis
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. TENTANG KECAMATAN MANGKUTANA (#tentang)
+       ========================================================================= -->
+  <section class="about-section" id="tentang">
+    <div class="container">
+      
+      <div class="about-grid">
+        
+        <!-- Collage Gambar Kiri -->
+        <div class="about-image-collage">
+          <img 
+            src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1000&q=80" 
+            alt="Pemandangan Alam Hutan Tropis Mangkutana" 
+            class="about-main-img"
+          >
+          <div class="about-floating-badge">
+            <div class="badge-number">Bumi Batara Guru</div>
+            <div class="badge-text">Kabupaten Luwu Timur, Sulawesi Selatan</div>
+          </div>
+        </div>
+
+        <!-- Teks Deskripsi Kanan -->
+        <div class="about-text-content">
+          <span class="section-tag">Mengenal Mangkutana</span>
+          <h3>Kecamatan Asri di Jantung Alam Luwu Timur</h3>
+          <p>
+            Kecamatan Mangkutana merupakan salah satu wilayah strategis di Kabupaten Luwu Timur yang berada di persimpangan jalan Trans Sulawesi penghubung Sulawesi Selatan dan Sulawesi Tengah. Terkenal dengan topografi alamnya yang subur, berhawa sejuk, dan dialiri sungai-sungai berair jernih dari pegunungan.
+          </p>
+          <p>
+            Selain pesona wisatanya yang memukau seperti <strong>Watu Maeta</strong>, <strong>Sungai Lengkong</strong>, dan <strong>Permandian Uelanti</strong>, Mangkutana juga merupakan sentra perkebunan lada (merica) dan kakao berkualitas tinggi. Keramahan masyarakat multikultur—termasuk suku Pamona, Luwu, Jawa, dan Toraja—menjadikan setiap kunjungan terasa hangat layaknya di rumah sendiri.
+          </p>
+
+          <!-- Keunggulan -->
+          <div class="features-list">
+            <div class="feature-item">
+              <div class="feature-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="feature-title">Wisata Terjangkau</div>
+                <div class="feature-desc">Tiket masuk ramah di kantong, mulai Rp 5.000 saja.</div>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 14 14"></polyline>
+                </svg>
+              </div>
+              <div>
+                <div class="feature-title">Akses Mudah</div>
+                <div class="feature-desc">Dilewati jalan utama Trans Sulawesi dengan akses jalan mulus.</div>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                  <line x1="6" y1="1" x2="6" y2="4"></line>
+                  <line x1="10" y1="1" x2="10" y2="4"></line>
+                  <line x1="14" y1="1" x2="14" y2="4"></line>
+                </svg>
+              </div>
+              <div>
+                <div class="feature-title">Kopi Khas Malela</div>
+                <div class="feature-desc">Seduhan kopi lokal aromatik dari kebun masyarakat desa.</div>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="feature-title">Alam Terjaga & Lestari</div>
+                <div class="feature-desc">Air sungai alami tanpa polusi langsung dari mata air pegunungan.</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. TIPS BERKUNJUNG KE MANGKUTANA
+       ========================================================================= -->
+  <section class="container" style="padding: 3.5rem 1.5rem;">
+    <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2.5rem; box-shadow: var(--shadow-sm);">
+      <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; color: var(--text-main); display:flex; align-items:center; gap:10px;">
+        <span style="color: var(--accent-amber);">🌿</span> Tips Berwisata Aman & Berkesan di Mangkutana
+      </h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 1.25rem;">
+        <div style="border-left: 3px solid var(--primary-emerald); padding-left: 1rem;">
+          <h5 style="font-weight: 700; font-size: 1rem; margin-bottom: 0.35rem; color: var(--text-main);">Waktu Terbaik</h5>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Pukul 08.00 - 11.30 WITA saat cuaca cerah untuk kesegaran mandi di air sungai yang belum terik.</p>
+        </div>
+        <div style="border-left: 3px solid var(--accent-teal); padding-left: 1rem;">
+          <h5 style="font-weight: 700; font-size: 1rem; margin-bottom: 0.35rem; color: var(--text-main);">Pakaian & Perlengkapan</h5>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Bawa baju ganti, kantong kedap air (waterproof bag), dan alas kaki anti licin saat menyusuri bebatuan sungai.</p>
+        </div>
+        <div style="border-left: 3px solid var(--accent-amber); padding-left: 1rem;">
+          <h5 style="font-weight: 700; font-size: 1rem; margin-bottom: 0.35rem; color: var(--text-main);">Jaga Kelestarian Alam</h5>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Dilarang membuang sampah ke aliran sungai. Bawa kembali sampah Anda demi kebersihan Luwu Timur.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- =========================================================================
+       9. MODAL INTERAKTIF DETAIL DESTINASI
+       ========================================================================= -->
+  <div class="modal-backdrop" id="destinationModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Tutup Detail">&times;</button>
+      <img id="modalImage" src="" alt="Foto Destinasi" class="modal-hero-image">
+      
+      <div class="modal-content-body">
+        <div class="modal-tags">
+          <span class="slide-tag" id="modalCategory">Kategori</span>
+        </div>
+        <h2 class="modal-title" id="modalTitle">Judul Destinasi</h2>
+        
+        <div class="modal-meta-grid">
+          <div>
+            <span class="meta-box-label">Lokasi</span>
+            <div class="meta-box-val" id="modalLocation">-</div>
+          </div>
+          <div>
+            <span class="meta-box-label">Rating Pengunjung</span>
+            <div class="meta-box-val" id="modalRating" style="color: var(--accent-amber);">-</div>
+          </div>
+          <div>
+            <span class="meta-box-label">Tiket / Biaya</span>
+            <div class="meta-box-val" id="modalPrice">-</div>
+          </div>
+        </div>
+
+        <div class="modal-section-title">Deskripsi Lengkap</div>
+        <p id="modalDescription" style="color: var(--text-muted); line-height: 1.7; font-size: 0.98rem; margin-bottom: 1.25rem;">-</p>
+
+        <!-- Kotak Kearifan Lokal Spesifik Destinasi -->
+        <div class="modal-kearifan-box">
+          <div class="kearifan-badge-header">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            Kearifan Lokal & Nilai Budaya
+          </div>
+          <h4 class="kearifan-title" id="modalKearifanTitle">-</h4>
+          <p class="kearifan-desc" id="modalKearifanDesc">-</p>
+          <div class="kearifan-tradisi-box">
+            <strong>Adat / Tradisi:</strong>
+            <span id="modalKearifanTradisi">-</span>
+          </div>
+        </div>
+
+        <div class="modal-section-title">Fasilitas yang Tersedia</div>
+        <div class="facility-chips" id="modalFacilities"></div>
+
+        <div class="modal-section-title">Jam Operasional & Tips Wisatawan</div>
+        <div style="background: var(--bg-subtle); padding: 1rem; border-radius: var(--radius-sm); margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">
+          <div style="margin-bottom: 4px;"><strong>⏰ Jam Buka:</strong> <span id="modalHours">-</span></div>
+          <div><strong>💡 Tips:</strong> <span id="modalTips">-</span></div>
+        </div>
+
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a id="modalGmapsLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary" style="flex: 1; justify-content: center;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            Petunjuk Arah Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       9. FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <h4>PESONA MANGKUTANA</h4>
+          <p>
+            Website resmi inisiatif promosi potensi pariwisata alam dan agrowisata Kecamatan Mangkutana, Kabupaten Luwu Timur, Provinsi Sulawesi Selatan.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Navigasi Utama</h5>
+          <ul class="footer-links">
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#wisata">Destinasi Wisata</a></li>
+            <li><a href="#tentang">Tentang Mangkutana</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Destinasi Unggulan</h5>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" onclick="openDestinationModal('watu-maeta')">Permandian Watu Maeta</a></li>
+            <li><a href="javascript:void(0)" onclick="openDestinationModal('sungai-lengkong')">Sungai Lengkong</a></li>
+            <li><a href="javascript:void(0)" onclick="openDestinationModal('pemandian-uelanti')">Permandian Uelanti</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Informasi & Media Sosial</h5>
+          <p style="font-size: 0.9rem; margin-bottom: 0.75rem;">
+            Kantor Camat Mangkutana, Kabupaten Luwu Timur, Sulawesi Selatan 92972
+          </p>
+          <div style="margin: 0.85rem 0;">
+            <a 
+              href="https://www.instagram.com/eastluwu/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="instagram-footer-btn"
+              title="Kunjungi Instagram Resmi Dinas Pariwisata Luwu Timur"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+              <span>@eastluwu (Dispar Luwu Timur)</span>
+            </a>
+          </div>
+          <p style="font-size: 0.88rem; color: #2dd4bf;">
+            Bumi Batara Guru — Lestari Alamku
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Portal Wisata Kecamatan Mangkutana. Seluruh hak cipta dilindungi.</div>
+        <div>Dibuat dengan ❤️ untuk kemajuan pariwisata Luwu Timur</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script JS -->
+  <script src="script.js"></script>
+</body>
+</html>
+

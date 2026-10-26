@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pusat Informasi Wisata & Budaya Kecamatan Mangkutana</title>
+  <meta name="description" content="Halaman informasi lengkap wisata, kearifan lokal, galeri multimedia, dan peta lokasi Kecamatan Mangkutana, Kabupaten Luwu Timur.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. HEADER / NAVBAR (Sesuai Storyboard: Logo di Kiri, Menu di Kanan)
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container header-container">
+      
+      <!-- Box Logo Kiri Sesuai Wireframe -->
+      <a href="index.html" class="brand-logo" title="Kembali ke Beranda">
+        <div class="logo-badge">
+          <!-- Logo Resmi Kabupaten Luwu Timur -->
+          <img src="logo_luwu_timur.png" alt="Logo Kabupaten Luwu Timur" class="logo-lutim-img">
+        </div>
+        <div class="logo-text-wrapper">
+          <span class="logo-title">MANGKUTANA</span>
+          <span class="logo-subtitle">Pusat Informasi Wisata</span>
+        </div>
+      </a>
+
+      <!-- Menu Kanan Sesuai Storyboard: [Beranda] [Wisata] [Tentang] -->
+      <nav class="main-nav" id="mainNav">
+        <ul class="nav-links">
+          <li>
+            <a href="index.html" class="nav-link wireframe-style">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+              Beranda
+            </a>
+          </li>
+          <li>
+            <a href="index.html#wisata" class="nav-link wireframe-style">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+              </svg>
+              Wisata
+            </a>
+          </li>
+          <li>
+            <a href="#info-content" class="nav-link wireframe-style active">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              Informasi
+            </a>
+          </li>
+          <li>
+            <a href="kuis.html" class="nav-link wireframe-style">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+              Kuis
+            </a>
+          </li>
+          <li>
+            <a href="index.html#tentang" class="nav-link wireframe-style">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+              Tentang
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Theme Mode & Mobile Toggle -->
+      <div class="header-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Ganti Tema">
+          <span id="themeIcon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </span>
+        </button>
+        <button class="btn-mobile-toggle" id="mobileNavToggle" aria-label="Buka Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. HERO SLIDER BANNER (Sesuai Storyboard: Banner Besar + Tombol < dan >)
+       ========================================================================= -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-carousel-wrapper">
+        
+        <div class="carousel-track-container" id="carouselTrack">
+          
+          <!-- Slide 1: Portal Informasi Wisata -->
+          <div class="carousel-slide active">
+            <img 
+              src="watu_maeta_utama.jpg" 
+              alt="Permandian Watu Maeta Mangkutana" 
+              class="carousel-image"
+            >
+            <div class="carousel-overlay">
+              <div class="slide-content">
+                <span class="slide-tag">Pusat Informasi Resmi</span>
+                <h1 class="slide-title">Panduan Lengkap Eksplorasi Mangkutana</h1>
+                <p class="slide-desc">
+                  Temukan info tiket, rute transportasi, kearifan budaya suku Pamona & Luwu, galeri alam menawan, hingga peta navigasi interaktif.
+                </p>
+                <div class="slide-actions">
+                  <a href="#info-content" class="btn-primary" onclick="switchInfoTab('wisata')">
+                    Buka Info Wisata
+                  </a>
+                  <a href="#info-content" class="btn-secondary" onclick="switchInfoTab('peta')">
+                    Cek Peta Lokasi
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Kearifan Budaya -->
+          <div class="carousel-slide">
+            <img 
+              src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80" 
+              alt="Kearifan Budaya dan Alam Mangkutana" 
+              class="carousel-image"
+            >
+            <div class="carousel-overlay">
+              <div class="slide-content">
+                <span class="slide-tag">Warisan Budaya & Hasil Bumi</span>
+                <h2 class="slide-title">Kearifan Lokal & Cita Rasa Kopi Malela</h2>
+                <p class="slide-desc">
+                  Mengenal filosofi batu hitam Watu Maeta serta perkebunan rakyat penghasil biji kopi aromatik dan lada berkualitas tinggi.
+                </p>
+                <div class="slide-actions">
+                  <a href="#info-content" class="btn-primary" onclick="switchInfoTab('kearifan')">
+                    Pelajari Kearifan Lokal
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Galeri Multimedia -->
+          <div class="carousel-slide">
+            <img 
+              src="sungai_lengkong_utama.jpg" 
+              alt="Galeri Panorama Mangkutana" 
+              class="carousel-image"
+            >
+            <div class="carousel-overlay">
+              <div class="slide-content">
+                <span class="slide-tag">Dokumentasi Audio & Visual</span>
+                <h2 class="slide-title">Potret Alam & Alunan Sungai Alami</h2>
+                <p class="slide-desc">
+                  Simak rekaman audio gemericik aliran sungai pegunungan dan kumpulan galeri foto sudut terindah di Kecamatan Mangkutana.
+                </p>
+                <div class="slide-actions">
+                  <a href="#info-content" class="btn-primary" onclick="switchInfoTab('galeri')">
+                    Buka Galeri Multimedia
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Tombol Navigasi Panah < dan > PERSIS Sesuai Storyboard -->
+        <button class="carousel-btn prev" id="carouselPrev" aria-label="Slide Sebelumnya" title="Sebelumnya">
+          &#10094;
+        </button>
+        <button class="carousel-btn next" id="carouselNext" aria-label="Slide Berikutnya" title="Berikutnya">
+          &#10095;
+        </button>
+
+        <!-- Indikator Slide -->
+        <div class="carousel-indicators" id="carouselIndicators"></div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. SUB-MENU 4 TOMBOL TAB & KOTAK KONTEN BESAR
+       (Sesuai Storyboard: [Informasi Wisata] [Kearifan Lokal] [Galeri Multimedia] [Peta Lokasi])
+       ========================================================================= -->
+  <section class="info-menu-section" id="info-content">
+    <div class="container">
+      
+      <!-- BARIS 4 TOMBOL TAB SESUAI WIREFRAME -->
+      <div class="info-tabs-bar" role="tablist">
+        <button class="info-tab-btn active" id="tabBtn-wisata" onclick="switchInfoTab('wisata')" role="tab" aria-selected="true" aria-controls="pane-wisata">
+          <span class="info-tab-icon">📋</span>
+          Informasi Wisata
+        </button>
+        <button class="info-tab-btn" id="tabBtn-kearifan" onclick="switchInfoTab('kearifan')" role="tab" aria-selected="false" aria-controls="pane-kearifan">
+          <span class="info-tab-icon">🌿</span>
+          Kearifan Lokal
+        </button>
+        <button class="info-tab-btn" id="tabBtn-galeri" onclick="switchInfoTab('galeri')" role="tab" aria-selected="false" aria-controls="pane-galeri">
+          <span class="info-tab-icon">📷</span>
+          Galeri Multimedia
+        </button>
+        <button class="info-tab-btn" id="tabBtn-peta" onclick="switchInfoTab('peta')" role="tab" aria-selected="false" aria-controls="pane-peta">
+          <span class="info-tab-icon">📍</span>
+          Peta Lokasi
+        </button>
+      </div>
+
+      <!-- KOTAK KONTEN BESAR (Kotak Silang Wireframe di Bawah Tab) -->
+      <div class="info-main-content-box">
+        
+        <!-- ===================================================================
+             PANE 1: INFORMASI WISATA
+             =================================================================== -->
+        <div class="tab-pane active" id="pane-wisata" role="tabpanel">
+          <div class="pane-header">
+            <div class="pane-title-group">
+              <span class="section-tag">Direktori Resmi</span>
+              <h2>Informasi & Panduan Wisata Mangkutana</h2>
+              <p>Rincian lengkap destinasi, tarif retribusi tiket, jam kunjungan, dan fasilitas yang tersedia.</p>
+            </div>
+            <div>
+              <span style="font-size: 0.88rem; color: var(--text-muted); background: var(--bg-subtle); padding: 6px 14px; border-radius: var(--radius-full); border: 1px solid var(--border-color);">
+                🕒 Diperbarui: Musim Wisata 2026
+              </span>
+            </div>
+          </div>
+
+          <!-- Grid Kartu Spesifikasi Wisata -->
+          <div class="info-cards-table-grid">
+            
+            <div class="info-spec-card">
+              <span class="spec-badge">Sungai Alami & Batu Hitam</span>
+              <h3>Permandian Watu Maeta</h3>
+              <ul class="spec-meta-list">
+                <li><strong>Lokasi:</strong> Desa Margolembo, Kec. Mangkutana</li>
+                <li><strong>Tiket Masuk:</strong> Rp 5.000 / orang</li>
+                <li><strong>Sewa Ban:</strong> Rp 5.000 - Rp 10.000</li>
+                <li><strong>Jam Buka:</strong> Setiap Hari, 07.00 - 18.00 WITA</li>
+                <li><strong>Fasilitas:</strong> Gazebo santai, toilet/kamar bilas, warung kapurung, area parkir luas.</li>
+              </ul>
+              <div style="display:flex; gap:8px;">
+                <button class="btn-primary" style="flex:1; justify-content:center; padding:0.6rem 0.8rem; font-size:0.85rem;" onclick="openDestinationModal('watu-maeta')">
+                  Detail & Kearifan Lokal
+                </button>
+                <a href="https://maps.google.com/?q=Watu+Maeta+Mangkutana" target="_blank" class="btn-card-detail" style="padding:0.6rem 0.9rem;" title="Buka Google Maps">
+                  Maps
+                </a>
+              </div>
+            </div>
+
+            <div class="info-spec-card">
+              <span class="spec-badge">Pemandian Asri &amp; Bebatuan Kali</span>
+              <h3>Wisata Alam Sungai Lengkong</h3>
+              <ul class="spec-meta-list">
+                <li><strong>Lokasi:</strong> Sungai Lengkong, Kec. Mangkutana</li>
+                <li><strong>Tiket Masuk:</strong> Rp 5.000 / orang</li>
+                <li><strong>Sewa Ban:</strong> Rp 5.000 - Rp 10.000</li>
+                <li><strong>Jam Buka:</strong> Setiap Hari, 07.30 - 17.30 WITA</li>
+                <li><strong>Fasilitas:</strong> Pondok santai tepi sungai, kolam mandi alami berbatu, kamar bilas, area parkir.</li>
+              </ul>
+              <div style="display:flex; gap:8px;">
+                <button class="btn-primary" style="flex:1; justify-content:center; padding:0.6rem 0.8rem; font-size:0.85rem;" onclick="openDestinationModal('sungai-lengkong')">
+                  Detail &amp; Kearifan Lokal
+                </button>
+                <a href="https://maps.google.com/?q=Sungai+Lengkong+Mangkutana" target="_blank" class="btn-card-detail" style="padding:0.6rem 0.9rem;" title="Buka Google Maps">
+                  Maps
+                </a>
+              </div>
+            </div>
+
+
+            <div class="info-spec-card">
+              <span class="spec-badge">Pemandian Asri Ramah Anak</span>
+              <h3>Permandian Alam Uelanti</h3>
+              <ul class="spec-meta-list">
+                <li><strong>Lokasi:</strong> Desa Kasintuwu, Kec. Mangkutana</li>
+                <li><strong>Tiket Masuk:</strong> Rp 5.000 / orang</li>
+                <li><strong>Sewa Pondok:</strong> Rp 25.000 / hari</li>
+                <li><strong>Jam Buka:</strong> 08.00 - 17.30 WITA</li>
+                <li><strong>Fasilitas:</strong> Kolam dangkal berpasir alami, pondok keluarga, penyewaan pelampung anak, kantin.</li>
+              </ul>
+              <div style="display:flex; gap:8px;">
+                <button class="btn-primary" style="flex:1; justify-content:center; padding:0.6rem 0.8rem; font-size:0.85rem;" onclick="openDestinationModal('pemandian-uelanti')">
+                  Detail & Kearifan Lokal
+                </button>
+                <a href="https://maps.google.com/?q=Uelanti+Kasintuwu+Mangkutana" target="_blank" class="btn-card-detail" style="padding:0.6rem 0.9rem;" title="Buka Google Maps">
+                  Maps
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+
+
+          <!-- Panduan Transportasi & Cara Menuju ke Mangkutana -->
+          <div class="transport-guide-box">
+            <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--primary-forest); display: flex; align-items: center; gap: 8px;">
+              <span>🚗</span> Panduan Akses Transportasi Menuju Mangkutana
+            </h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.35rem;">
+              Kecamatan Mangkutana berada di persimpangan emas jalan Trans Sulawesi, sangat mudah dijangkau dari berbagai kota penyangga:
+            </p>
+
+            <div class="transport-steps-grid">
+              <div class="step-card">
+                <div class="step-num">1</div>
+                <h5 style="font-weight: 700; margin-bottom: 4px;">Dari Kota Palopo / Bandara Bua</h5>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">
+                  Perjalanan darat sekitar 2 – 2.5 jam menyusuri jalan Trans Sulawesi ke arah utara menuju Luwu Timur. Jalan aspal mulus dan dilayani bus/travel antarkota.
+                </p>
+              </div>
+
+              <div class="step-card">
+                <div class="step-num">2</div>
+                <h5 style="font-weight: 700; margin-bottom: 4px;">Dari Kota Malili (Ibu Kota Lutim)</h5>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">
+                  Jarak tempuh sekitar 40 – 45 menit (35 km) ke arah barat. Dapat menggunakan kendaraan pribadi, motor sewa, atau angkutan pedesaan.
+                </p>
+              </div>
+
+              <div class="step-card">
+                <div class="step-num">3</div>
+                <h5 style="font-weight: 700; margin-bottom: 4px;">Dari Perbatasan Sulawesi Tengah (Poso/Tentena)</h5>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">
+                  Mangkutana adalah gerbang selatan yang menghubungkan Danau Poso dengan Sulawesi Selatan melalui jalur perbukitan yang asri.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================================================================
+             PANE 2: KEARIFAN LOKAL
+             =================================================================== -->
+        <div class="tab-pane" id="pane-kearifan" role="tabpanel">
+          <div class="pane-header">
+            <div class="pane-title-group">
+              <span class="section-tag">Budaya & Tradisi Lestari</span>
+              <h2>Kearifan Lokal Masyarakat Mangkutana</h2>
+              <p>Mengenal sejarah penamaan, harmoni sosial multietnis, dan komoditas unggulan hasil bumi Luwu Timur.</p>
+            </div>
+          </div>
+
+          <!-- Filter / Pemilih Kearifan Lokal per Destinasi -->
+          <div style="margin-bottom: 1.5rem;">
+            <span style="font-size: 0.88rem; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 0.5rem;">
+              Pilih Destinasi untuk Melihat Kearifan Lokal Spesifiknya:
+            </span>
+            <div class="kearifan-dest-selector" id="kearifanSelector">
+              <button class="kearifan-selector-btn active" onclick="filterKearifanDisplay('all', this)">
+                🌐 Semua Destinasi (3)
+              </button>
+              <button class="kearifan-selector-btn" onclick="filterKearifanDisplay('watu-maeta', this)">
+                🪨 Watu Maeta
+              </button>
+              <button class="kearifan-selector-btn" onclick="filterKearifanDisplay('sungai-lengkong', this)">
+                🌊 Sungai Lengkong
+              </button>
+              <button class="kearifan-selector-btn" onclick="filterKearifanDisplay('pemandian-uelanti', this)">
+                💧 Pemandian Uelanti
+              </button>
+            </div>
+          </div>
+
+          <!-- Daftar Kearifan Lokal SETIAP Destinasi Wisata -->
+          <div id="kearifanCardsList" style="margin-bottom: 3rem;">
+            
+            <!-- 1. Watu Maeta -->
+            <div class="kearifan-detail-card highlight" data-dest="watu-maeta">
+              <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:10px; margin-bottom:0.75rem;">
+                <div>
+                  <span class="spec-badge">Permandian Watu Maeta • Desa Margolembo</span>
+                  <h3 style="font-size: 1.35rem; font-weight:800; color:var(--text-main); margin-top:4px;">
+                    🪨 Filosofi Batu Hitam Pamona & Kesucian Sumber Air
+                  </h3>
+                </div>
+                <button class="btn-primary" style="padding: 0.45rem 1rem; font-size: 0.85rem;" onclick="openDestinationModal('watu-maeta')">
+                  Lihat Detail Objek
+                </button>
+              </div>
+              <p style="color:var(--text-muted); line-height: 1.7; font-size:0.95rem; margin-bottom: 1rem;">
+                Nama <em>Watu Maeta</em> berakar dari bahasa asli suku Pamona (<em>Watu</em> = batu, <em>Maeta</em> = hitam). Menurut cerita turun-temurun para tetua adat, formasi sepasang batuan andesit hitam raksasa di tengah aliran sungai merupakan lambang keteguhan spiritual dan pelindung mata air pegunungan. Warga desa meyakini bahwa air yang mengalir di sela batu hitam ini membawa berkah kemurnian, kesehatan jasmani, dan kedamaian pikiran.
+              </p>
+              <div class="kearifan-tradisi-box">
+                <strong>Adat & Pantangan Lokal:</strong>
+                <span>Dilarang keras mencoret atau merusak formasi batu hitam, serta pantangan mencemari aliran hulu sungai demi menjaga berkah air bagi seluruh masyarakat.</span>
+              </div>
+            </div>
+
+            <!-- 2. Wisata Alam Sungai Lengkong -->
+            <div class="kearifan-detail-card" data-dest="sungai-lengkong">
+              <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:10px; margin-bottom:0.75rem;">
+                <div>
+                  <span class="spec-badge">Wisata Alam Sungai Lengkong • Kec. Mangkutana</span>
+                  <h3 style="font-size: 1.35rem; font-weight:800; color:var(--text-main); margin-top:4px;">
+                    🌊 Harmoni Air Lengkong &amp; Tradisi Konservasi Bebatuan Sungai
+                  </h3>
+                </div>
+                <button class="btn-primary" style="padding: 0.45rem 1rem; font-size: 0.85rem;" onclick="openDestinationModal('sungai-lengkong')">
+                  Lihat Detail Objek
+                </button>
+              </div>
+              <p style="color:var(--text-muted); line-height: 1.7; font-size:0.95rem; margin-bottom: 1rem;">
+                Bagi masyarakat Mangkutana, aliran Sungai Lengkong dipandang sebagai anugerah kesuburan alam. Tetua desa mewariskan etika luhur menjaga kelestarian pepohonan sempadan sungai dan susunan <em>batu kali alami</em> guna mencegah banjir bandang serta menjaga kejernihan air tetap murni sepanjang musim.
+              </p>
+              <div class="kearifan-tradisi-box">
+                <strong>Adat &amp; Pantangan Lokal:</strong>
+                <span>Budaya gotong royong membersihkan alur sungai dan pantangan membuang sampah/limbah ke dalam aliran air Sungai Lengkong.</span>
+              </div>
+            </div>
+
+            <!-- 3. Permandian Alam Uelanti -->
+            <div class="kearifan-detail-card" data-dest="pemandian-uelanti">
+              <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:10px; margin-bottom:0.75rem;">
+                <div>
+                  <span class="spec-badge">Permandian Alam Uelanti • Desa Kasintuwu</span>
+                  <h3 style="font-size: 1.35rem; font-weight:800; color:var(--text-main); margin-top:4px;">
+                    💧 Falsafah Kasintuwu (Persatuan) &amp; Tradisi Santap Kapurung Bersama
+                  </h3>
+                </div>
+                <button class="btn-primary" style="padding: 0.45rem 1rem; font-size: 0.85rem;" onclick="openDestinationModal('pemandian-uelanti')">
+                  Lihat Detail Objek
+                </button>
+              </div>
+              <p style="color:var(--text-muted); line-height: 1.7; font-size:0.95rem; margin-bottom: 1rem;">
+                Nama desa <em>Kasintuwu</em> memiliki arti "bersatu, rukun, dan saling mengasihi" dalam bahasa lokal Pamona. Permandian Uelanti sejak berpuluh tahun lalu menjadi titik temu rekonsiliasi dan harmoni antarsuku (Pamona, Luwu, Bugis, Toraja, Jawa). Masyarakat membiasakan tradisi makan <em>Kapurung</em> (olahan sagu khas tanah Luwu berkuah ikan segar dan sayur pakis sungai) di pondok tepi air sebagai simbol perekat kekeluargaan.
+              </p>
+              <div class="kearifan-tradisi-box">
+                <strong>Adat &amp; Pantangan Lokal:</strong>
+                <span>Semangat toleransi tinggi, saling menghargai antarpengunjung berbagai suku, serta menjaga keteduhan pohon pelindung di sekitar kolam alami.</span>
+              </div>
+            </div>
+
+          </div>
+
+
+
+          <!-- Komoditas Khas Hasil Bumi -->
+          <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 1rem; color: var(--text-main);">
+            🌱 Komoditas Unggulan Asli Mangkutana
+          </h3>
+          <div class="commodities-grid">
+            
+            <div class="commodity-card">
+              <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" alt="Kopi Malela" class="commodity-img">
+              <div class="commodity-body">
+                <h5>Kopi Malela Mangkutana</h5>
+                <p>Biji kopi robusta dan arabika khas lereng perbukitan Dusun Malela dengan aroma karamel alami dan citarasa *full body* yang nikmat diseduh panas.</p>
+              </div>
+            </div>
+
+            <div class="commodity-card">
+              <img src="https://images.unsplash.com/photo-1509358271058-acd22cc93898?auto=format&fit=crop&w=600&q=80" alt="Lada Merica Luwu Timur" class="commodity-img">
+              <div class="commodity-body">
+                <h5>Lada Hitam & Putih (Merica)</h5>
+                <p>Luwu Timur terkenal sebagai lumbung lada terbesar di Sulawesi. Perkebunan lada Mangkutana menghasilkan butiran lada berpedas tajam kualitas ekspor.</p>
+              </div>
+            </div>
+
+            <div class="commodity-card">
+              <img src="https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80" alt="Kakao Cokelat" class="commodity-img">
+              <div class="commodity-body">
+                <h5>Kakao Fermentasi</h5>
+                <p>Perkebunan cokelat yang dirawat petani desa dengan proses fermentasi standar tinggi untuk menghasilkan bahan baku cokelat premium.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ===================================================================
+             PANE 3: GALERI MULTIMEDIA
+             =================================================================== -->
+        <div class="tab-pane" id="pane-galeri" role="tabpanel">
+          <div class="pane-header">
+            <div class="pane-title-group">
+              <span class="section-tag">Audio & Visual Dokumentasi</span>
+              <h2>Galeri Keindahan Panorama Mangkutana</h2>
+              <p>Eksplorasi sudut-sudut eksotis wisata air, alam perbukitan, serta dengarkan rekaman audio suasana alam sungai.</p>
+            </div>
+          </div>
+
+          <!-- Interactive Sound of Nature Widget -->
+          <div class="nature-audio-widget" style="margin-bottom: 2.5rem;">
+            <div class="audio-info-box">
+              <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #5eead4; font-weight: 700;">Simulasi Audio Interaktif</span>
+              <h4>Alunan Alam Sungai Watu Maeta & Kasintuwu</h4>
+              <p>Dengarkan gemericik aliran sungai pegunungan dan suara kicau burung hutan tropis Mangkutana.</p>
+            </div>
+            
+            <div class="audio-controls-group">
+              <div class="sound-waves" id="soundWavesVisualizer">
+                <span class="wave-bar"></span>
+                <span class="wave-bar"></span>
+                <span class="wave-bar"></span>
+                <span class="wave-bar"></span>
+                <span class="wave-bar"></span>
+              </div>
+              <button class="btn-play-sound" id="btnAudioAmbiance" aria-label="Putar Suara Alam" onclick="toggleNatureSound()">
+                <span id="audioPlayIcon">▶</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Pemilih Destinasi untuk Melihat Semua Objek Fotonya -->
+          <div style="margin-bottom: 1.5rem;">
+            <span style="font-size: 0.88rem; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 0.5rem;">
+              Pilih Destinasi Wisata untuk Melihat Seluruh Koleksi Objek Fotonya:
+            </span>
+            <div class="gallery-dest-selector" id="gallerySelector">
+              <button class="gallery-filter-btn active" onclick="filterGallery('all', this)">
+                🌐 Semua Objek Wisata (35 Foto)
+              </button>
+              <button class="gallery-filter-btn" onclick="filterGallery('watu-maeta', this)">
+                🪨 Watu Maeta (14 Objek Foto Asli)
+              </button>
+              <button class="gallery-filter-btn" onclick="filterGallery('sungai-lengkong', this)">
+                🌊 Sungai Lengkong (12 Objek Foto Asli)
+              </button>
+              <button class="gallery-filter-btn" onclick="filterGallery('pemandian-uelanti', this)">
+                💧 Permandian Uelanti (9 Objek Foto Asli)
+              </button>
+            </div>
+          </div>
+
+          <!-- Galeri Foto Grid Dinamis (Diisi Otomatis oleh JavaScript Sesuai Destinasi yang Dipilih) -->
+          <div class="gallery-grid" id="galleryGridContainer"></div>
+        </div>
+
+        <!-- ===================================================================
+             PANE 4: PETA LOKASI
+             =================================================================== -->
+        <div class="tab-pane" id="pane-peta" role="tabpanel">
+          <div class="pane-header">
+            <div class="pane-title-group">
+              <span class="section-tag">Navigasi GPS & Rute</span>
+              <h2>Peta Interaktif Destinasi Kecamatan Mangkutana</h2>
+              <p>Jelajahi titik lokasi tepat setiap objek wisata dan dapatkan petunjuk arah ke smartphone Anda.</p>
+            </div>
+          </div>
+
+          <div class="map-layout-grid">
+            
+            <!-- Map Embed Container -->
+            <div class="map-embed-wrapper">
+              <iframe 
+                class="map-embed-iframe" 
+                title="Peta Kecamatan Mangkutana, Luwu Timur"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63688.58309121855!2d120.73024845!3d-2.5283437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d919329c298063b%3A0x6b6c22cb9a184131!2sKec.%20Mangkutana%2C%20Kabupaten%20Luwu%20Timur%2C%20Sulawesi%20Selatan!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+
+            <!-- List Titik Lokasi & Jarak -->
+            <div class="map-destinations-list">
+              
+              <div class="map-dest-card">
+                <div class="map-dest-info">
+                  <h5>1. Permandian Watu Maeta</h5>
+                  <p>📍 Desa Margolembo | ± 7 km dari Kantor Camat</p>
+                </div>
+                <a href="https://maps.google.com/?q=Watu+Maeta+Mangkutana" target="_blank" rel="noopener noreferrer" class="btn-gmaps-direct">
+                  Buka Rute
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+
+              <div class="map-dest-card">
+                <div class="map-dest-info">
+                  <h5>2. Wisata Alam Sungai Lengkong</h5>
+                  <p>📍 Sungai Lengkong, Kec. Mangkutana | ± 6 km dari pusat kecamatan</p>
+                </div>
+                <a href="https://maps.google.com/?q=Sungai+Lengkong+Mangkutana" target="_blank" rel="noopener noreferrer" class="btn-gmaps-direct">
+                  Buka Rute
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+
+              <div class="map-dest-card">
+                <div class="map-dest-info">
+                  <h5>3. Permandian Alam Uelanti</h5>
+                  <p>📍 Desa Kasintuwu | ± 5 km dari poros jalan Trans</p>
+                </div>
+                <a href="https://maps.google.com/?q=Uelanti+Kasintuwu+Mangkutana" target="_blank" rel="noopener noreferrer" class="btn-gmaps-direct">
+                  Buka Rute
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. LIGHTBOX MODAL UNTUK PREVIEW FOTO GALERI
+       ========================================================================= -->
+  <div class="modal-backdrop" id="galleryLightboxModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width: 720px; background: #000; border: none; overflow: hidden;">
+      <button class="modal-close-btn" onclick="closeLightbox()">&times;</button>
+      <img id="lightboxImg" src="" alt="Pratinjau Foto" style="width: 100%; max-height: 520px; object-fit: contain;">
+      <div style="padding: 1.5rem; background: var(--bg-card);">
+        <h4 id="lightboxTitle" style="font-size: 1.3rem; font-weight: 800; color: var(--text-main); margin-bottom: 4px;">-</h4>
+        <p id="lightboxDesc" style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">-</p>
+        <div style="margin-top: 1rem; padding-top: 0.85rem; border-top: 1px dashed var(--border-color); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+          <span style="font-size:0.82rem; color:var(--text-muted);">Ingin melihat info tiket, fasilitas & kearifan lokal tempat ini?</span>
+          <button class="btn-primary" id="lightboxDestBtn" style="padding: 0.55rem 1.15rem; font-size: 0.85rem;">
+            Lihat Detail & Kearifan Lokal
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL DETAIL DESTINASI & KEARIFAN LOKAL
+       ========================================================================= -->
+  <div class="modal-backdrop" id="destinationModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Tutup Detail">&times;</button>
+      <img id="modalImage" src="" alt="Foto Destinasi" class="modal-hero-image">
+      
+      <div class="modal-content-body">
+        <div class="modal-tags">
+          <span class="slide-tag" id="modalCategory">Kategori</span>
+        </div>
+        <h2 class="modal-title" id="modalTitle">Judul Destinasi</h2>
+        
+        <div class="modal-meta-grid">
+          <div>
+            <span class="meta-box-label">Lokasi</span>
+            <div class="meta-box-val" id="modalLocation">-</div>
+          </div>
+          <div>
+            <span class="meta-box-label">Rating Pengunjung</span>
+            <div class="meta-box-val" id="modalRating" style="color: var(--accent-amber);">-</div>
+          </div>
+          <div>
+            <span class="meta-box-label">Tiket / Biaya</span>
+            <div class="meta-box-val" id="modalPrice">-</div>
+          </div>
+        </div>
+
+        <div class="modal-section-title">Deskripsi Lengkap</div>
+        <p id="modalDescription" style="color: var(--text-muted); line-height: 1.7; font-size: 0.98rem; margin-bottom: 1.25rem;">-</p>
+
+        <!-- Kotak Kearifan Lokal Spesifik Destinasi -->
+        <div class="modal-kearifan-box">
+          <div class="kearifan-badge-header">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            Kearifan Lokal & Nilai Budaya
+          </div>
+          <h4 class="kearifan-title" id="modalKearifanTitle">-</h4>
+          <p class="kearifan-desc" id="modalKearifanDesc">-</p>
+          <div class="kearifan-tradisi-box">
+            <strong>Adat / Tradisi:</strong>
+            <span id="modalKearifanTradisi">-</span>
+          </div>
+        </div>
+
+        <div class="modal-section-title">Fasilitas yang Tersedia</div>
+        <div class="facility-chips" id="modalFacilities"></div>
+
+        <div class="modal-section-title">Jam Operasional & Tips Wisatawan</div>
+        <div style="background: var(--bg-subtle); padding: 1rem; border-radius: var(--radius-sm); margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">
+          <div style="margin-bottom: 4px;"><strong>⏰ Jam Buka:</strong> <span id="modalHours">-</span></div>
+          <div><strong>💡 Tips:</strong> <span id="modalTips">-</span></div>
+        </div>
+
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a id="modalGmapsLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary" style="flex: 1; justify-content: center;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            Petunjuk Arah Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       5. FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <h4>PESONA MANGKUTANA</h4>
+          <p>
+            Pusat informasi resmi potensi pariwisata, agrowisata, kearifan budaya, dan navigasi wisata Kecamatan Mangkutana, Kabupaten Luwu Timur.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Menu Utama</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="index.html#wisata">4 Destinasi Unggulan</a></li>
+            <li><a href="#info-content" onclick="switchInfoTab('wisata')">Informasi Wisata</a></li>
+            <li><a href="#info-content" onclick="switchInfoTab('kearifan')">Kearifan Lokal</a></li>
+            <li><a href="#info-content" onclick="switchInfoTab('galeri')">Galeri Multimedia</a></li>
+            <li><a href="#info-content" onclick="switchInfoTab('peta')">Peta Lokasi</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Kontak & Media Sosial</h5>
+          <p style="font-size: 0.9rem; margin-bottom: 0.75rem;">
+            Jl. Poros Mangkutana, Kabupaten Luwu Timur, Sulawesi Selatan
+          </p>
+          <div style="margin: 0.85rem 0;">
+            <a 
+              href="https://www.instagram.com/eastluwu/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="instagram-footer-btn"
+              title="Kunjungi Instagram Resmi Dinas Pariwisata Luwu Timur"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+              <span>@eastluwu (Dispar Luwu Timur)</span>
+            </a>
+          </div>
+          <p style="font-size: 0.88rem; color: #2dd4bf;">
+            Email: pariwisata@luwutimurkab.go.id
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Luwu Timur Lestari</h5>
+          <p style="font-size: 0.9rem;">
+            Mari bersama menjaga kelestarian alam, tidak membuang sampah ke sungai, dan menghormati kearifan warga lokal.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Portal Wisata Kecamatan Mangkutana. Seluruh hak cipta dilindungi.</div>
+        <div>Desain dibuat berdasarkan Storyboard Wireframe</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script JS -->
+  <script src="script.js"></script>
+</body>
+</html>
+

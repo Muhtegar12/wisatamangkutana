@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuis Interaktif Wisata Kecamatan Mangkutana</title>
+  <meta name="description" content="Uji wawasan Anda seputar destinasi wisata, kearifan lokal, dan keindahan alam Kecamatan Mangkutana, Kabupaten Luwu Timur. Dapatkan skor dan predikat penjelajah terbaik!">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. HEADER / NAVBAR (Sesuai Storyboard Wireframe)
+       Logo di Kiri, Tombol Navigasi [Beranda] [Wisata] [Kuis] [Tentang] di Kanan
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container header-container">
+      
+      <!-- Box Logo Kiri Sesuai Wireframe -->
+      <a href="index.html" class="brand-logo" title="Kembali ke Beranda">
+        <div class="logo-badge">
+          <!-- Logo Resmi Kabupaten Luwu Timur -->
+          <img src="logo_luwu_timur.png" alt="Logo Kabupaten Luwu Timur" class="logo-lutim-img">
+        </div>
+        <div class="logo-text-wrapper">
+          <span class="logo-title">MANGKUTANA</span>
+          <span class="logo-subtitle">Kuis Wisata Interaktif</span>
+        </div>
+      </a>
+
+      <!-- Menu Kanan Sesuai Wireframe: [Beranda] [Wisata] [Tentang] -->
+      <nav class="main-nav" id="mainNav">
+        <ul class="nav-links">
+          <li>
+            <a href="index.html" class="nav-link wireframe-style">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+              Beranda
+            </a>
+          </li>
+          <li>
+            <a href="index.html#wisata" class="nav-link wireframe-style">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+              </svg>
+              Wisata
+            </a>
+          </li>
+          <li>
+            <a href="informasi.html" class="nav-link wireframe-style">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              Informasi
+            </a>
+          </li>
+          <li>
+            <a href="kuis.html" class="nav-link wireframe-style active">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+              Kuis
+            </a>
+          </li>
+          <li>
+            <a href="index.html#tentang" class="nav-link wireframe-style">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+              </svg>
+              Tentang
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Theme Mode & Mobile Toggle -->
+      <div class="header-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Ganti Tema">
+          <span id="themeIcon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </span>
+        </button>
+        <button class="btn-mobile-toggle" id="mobileNavToggle" aria-label="Buka Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. WADAH UTAMA KUIS (PERSIS SESUAI STORYBOARD WIREFRAME)
+       Kotak Besar Berisi Teks Pengantar dengan Tombol [kuis] di Tengah
+       ========================================================================= -->
+  <main class="quiz-section" id="kuis-section">
+    <div class="container" style="width: 100%;">
+      
+      <!-- Kotak Bingkai Besar Kuis Sesuai Wireframe -->
+      <div class="quiz-main-frame">
+        
+        <!-- ===================================================================
+             A. TAMPILAN AWAL: TEKS DESKRIPSI & TOMBOL [KUIS] DI TENGAH
+             =================================================================== -->
+        <div class="quiz-intro-content" id="quizIntroBox">
+          <span class="quiz-badge-tag">🎯 Uji Wawasan Pariwisata</span>
+          <h1 class="quiz-intro-title">Seberapa Kenal Anda dengan Wisata Kecamatan Mangkutana?</h1>
+          
+          <p class="quiz-intro-text">
+            Kecamatan Mangkutana di Kabupaten Luwu Timur menyimpan beragam surga alam tersembunyi—mulai dari kejernihan sejati Permandian Watu Maeta, kesegaran aliran alami Sungai Lengkong, keteduhan kolam keluarga Permandian Alam Uelanti, hingga kekayaan falsafah Kasintuwu dan kearifan lokal Tana Luwu. Ikuti kuis interaktif 10 pertanyaan ini untuk membuktikan pengetahuan Anda dan raih skor maksimal 100 poin!
+          </p>
+
+          <!-- TOMBOL [KUIS] PERSIS DI TENGAH SESUAI GAMBAR WIREFRAME -->
+          <div class="btn-kuis-center-wrapper">
+            <button class="btn-kuis-center" onclick="startQuiz()" id="btnStartQuiz">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              kuis
+            </button>
+          </div>
+
+          <!-- Rincian Petunjuk Kuis -->
+          <div class="quiz-rules-preview">
+            <div class="rule-pill">
+              <span>📝 10 Pertanyaan Pilihan Ganda</span>
+            </div>
+            <div class="rule-pill">
+              <span>⭐ +10 Poin Tiap Jawaban Benar</span>
+            </div>
+            <div class="rule-pill">
+              <span>💯 Skor Maksimal 100 Poin</span>
+            </div>
+            <div class="rule-pill">
+              <span>💡 Pembahasan & Kearifan Lokal</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================================================================
+             B. TAMPILAN KUIS AKTIF (10 PERTANYAAN INTERAKTIF)
+             =================================================================== -->
+        <div class="quiz-active-interface" id="quizActiveInterface">
+          
+          <!-- Bilah Status Kuis -->
+          <div class="quiz-header-bar">
+            <div>
+              <span class="quiz-progress-text" id="quizProgressText">Pertanyaan 1 dari 10</span>
+            </div>
+            <div>
+              <span class="quiz-score-badge" id="quizScoreBadge">⭐ Skor: 0 / 100</span>
+            </div>
+          </div>
+
+          <!-- Progress Bar Garis -->
+          <div class="quiz-progress-track">
+            <div class="quiz-progress-fill" id="quizProgressFill"></div>
+          </div>
+
+          <!-- Kotak Soal -->
+          <div class="quiz-question-box">
+            <span class="quiz-question-number" id="quizQuestionNum">SOAL NO. 1 DARI 10</span>
+            <h2 class="quiz-question-title" id="quizQuestionTitle">Pertanyaan kuis akan dimuat di sini...</h2>
+          </div>
+
+          <!-- Daftar Pilihan Jawaban A, B, C, D -->
+          <div class="quiz-options-list" id="quizOptionsList">
+            <!-- Pilihan di-generate dinamis oleh script.js -->
+          </div>
+
+          <!-- Kotak Pembahasan & Nilai Kearifan Lokal -->
+          <div class="quiz-feedback-box" id="quizFeedbackBox"></div>
+
+          <!-- Tombol Lanjut Soal Berikutnya -->
+          <div class="quiz-next-actions">
+            <button class="btn-primary" id="btnNextQuestion" style="display:none;" onclick="nextQuizQuestion()">
+              Pertanyaan Berikutnya ➔
+            </button>
+          </div>
+
+        </div>
+
+        <!-- ===================================================================
+             C. TAMPILAN HASIL AKHIR & SKOR KUIS
+             =================================================================== -->
+        <div class="quiz-result-view" id="quizResultView">
+          
+          <!-- Tampilan Skor Lingkaran -->
+          <div class="score-circle-display">
+            <span class="score-big-number" id="resultScoreNumber">100</span>
+            <span class="score-max-number">DARI 100 POIN</span>
+          </div>
+
+          <h2 class="quiz-predicate-title" id="resultPredicateTitle">🏆 Duta Wisata Sejati Mangkutana!</h2>
+          <p class="quiz-predicate-desc" id="resultPredicateDesc">
+            Luar biasa! Pengetahuan Anda tentang seluruh objek wisata dan kearifan lokal Kecamatan Mangkutana sangat mendalam.
+          </p>
+
+          <div class="quiz-result-buttons">
+            <button class="btn-primary" onclick="restartQuiz()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="1 4 1 10 7 10"></polyline>
+                <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+              </svg>
+              Ulangi Kuis
+            </button>
+            <a href="index.html#wisata" class="btn-secondary" style="background:var(--bg-subtle); color:var(--text-main); border:1px solid var(--border-color);">
+              Jelajahi Wisata Mangkutana
+            </a>
+            <a href="informasi.html" class="btn-secondary" style="background:var(--bg-subtle); color:var(--text-main); border:1px solid var(--border-color);">
+              Baca Kearifan Lokal
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       3. FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <h4>PESONA MANGKUTANA</h4>
+          <p>
+            Media interaktif edukasi dan promosi pariwisata alam, agrowisata kopi, dan kearifan lokal Kecamatan Mangkutana, Kabupaten Luwu Timur.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Navigasi Utama</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda Utama</a></li>
+            <li><a href="index.html#wisata">3 Destinasi Unggulan</a></li>
+            <li><a href="informasi.html">Pusat Informasi & Budaya</a></li>
+            <li><a href="kuis.html">Kuis Wisata Interaktif</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Destinasi Kuis</h5>
+          <ul class="footer-links">
+            <li><a href="informasi.html#info-content">Permandian Watu Maeta</a></li>
+            <li><a href="informasi.html#info-content">Sungai Lengkong</a></li>
+            <li><a href="informasi.html#info-content">Permandian Alam Uelanti</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Luwu Timur — Media Sosial</h5>
+          <p style="font-size: 0.9rem; margin-bottom: 0.75rem;">
+            Mari bersama merawat kelestarian hulu sungai dan menghargai kearifan lokal adat Luwu Timur.
+          </p>
+          <div style="margin-top: 0.85rem;">
+            <a 
+              href="https://www.instagram.com/eastluwu/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="instagram-footer-btn"
+              title="Kunjungi Instagram Resmi Dinas Pariwisata Luwu Timur"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+              <span>@eastluwu (Dispar Luwu Timur)</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Portal Wisata Kecamatan Mangkutana. Seluruh hak cipta dilindungi.</div>
+        <div>Fitur Kuis Interaktif Dibuat Berdasarkan Storyboard Wireframe</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script JS -->
+  <script src="script.js"></script>
+</body>
+</html>
+
